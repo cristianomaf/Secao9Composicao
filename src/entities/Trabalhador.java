@@ -88,7 +88,7 @@ public class Trabalhador {
 			cal.setTime(c.getData());//captura a data do contrato c 
 			//o contrato tem uma data que pegaremos o ano e mes
 			int c_ano = cal.get(Calendar.YEAR);
-			int c_mes = cal.get(Calendar.MONTH);
+			int c_mes = 1 + cal.get(Calendar.MONTH); //tem que somar 1 para dar valor certo pois pega de 0 a 11 os meses 
 			
 			if(ano == c_ano && mes == c_mes) { // verifica se ano passado como argumento é igual ao ano do contrato e mes do contrato e igual mes passado como atributo
 				soma+=c.valorTotal();  // se for soma o valor do contrato na variavel soma que possui o salario base como valor inicial
